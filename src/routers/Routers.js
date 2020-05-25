@@ -13,6 +13,9 @@ import Pilates from "views/Pilates/Pilates";
 import Yoga from "views/Yoga/Yoga";
 import Core from "views/Core/Core";
 import Cardio from "views/Cardio/Cardio";
+import Tranings from "views/Tranings/Tranings";
+import Nutritionist from "views/Nutritionist/Nutritionist";
+import Massages from "views/Masages/Masages";
 function AppRouters(props) {
   const [language, setLanguage] = useState("Srpski");
   const [srpski, setSrpski] = useState({
@@ -36,6 +39,12 @@ function AppRouters(props) {
         <Route path="/yoga" render={(props) => <Yoga {...props} />} />
         <Route path="/core" render={(props) => <Core {...props} />} />
         <Route path="/cardio" render={(props) => <Cardio {...props} />} />
+        <Route path="/traning" render={(props) => <Tranings {...props} />} />
+        <Route
+          path="/nutritionist"
+          render={(props) => <Nutritionist {...props} />}
+        />
+        <Route path="/massages" render={(props) => <Massages {...props} />} />
         <Route render={(props) => <ErrorPage404 {...props} />} />
       </Switch>
       <Footer />

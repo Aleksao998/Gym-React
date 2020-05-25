@@ -78,23 +78,28 @@ function NavbarMenu(props) {
               </NavLink>
             </NavItem>
 
+            <Dropdown nav isOpen={dropdownOpenT} toggle={toggleT}>
+              <DropdownToggle nav caret>
+                Usluge
+              </DropdownToggle>
+              <DropdownMenu className="menuBarDropdown">
+                <DropdownItem tag={Link}>Treninzi</DropdownItem>
+                <DropdownItem tag={Link}>Nutricinista</DropdownItem>
+                <DropdownItem tag={Link}>Masaze</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+
             <NavItem>
               <NavLink to="/ads" tag={Link}>
-                Oglasi
+                Zakazivanje Treninga
               </NavLink>
             </NavItem>
 
-            <Dropdown nav isOpen={dropdownOpenT} toggle={toggleT}>
-              <DropdownToggle nav caret>
-                Vrsta Treninga
-              </DropdownToggle>
-              <DropdownMenu className="menuBarDropdown">
-                <DropdownItem tag={Link}>Yoga</DropdownItem>
-                <DropdownItem tag={Link}>Core</DropdownItem>
-                <DropdownItem tag={Link}>Pilates</DropdownItem>
-                <DropdownItem tag={Link}>Cardio</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            <NavItem>
+              <NavLink to="/o-nama" tag={Link}>
+                Moj nalog
+              </NavLink>
+            </NavItem>
 
             <NavItem>
               <NavLink to="/o-nama" tag={Link}>
