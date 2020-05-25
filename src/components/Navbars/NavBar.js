@@ -5,6 +5,10 @@ import classnames from "classnames";
 
 // reactstrap components
 import {
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu,
   Collapse,
   NavbarBrand,
   Navbar,
@@ -15,6 +19,8 @@ import {
 } from "reactstrap";
 
 function NavbarMenu(props) {
+  const [dropdownOpenL, setDropdownOpenL] = React.useState(false);
+  const [dropdownOpenT, setDropdownOpenT] = React.useState(false);
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -26,7 +32,11 @@ function NavbarMenu(props) {
   React.useEffect(() => {
     setNavbarColor("");
   });
-
+  const toggleL = () => setDropdownOpenL(!dropdownOpenL);
+  const toggleT = () => setDropdownOpenT(!dropdownOpenT);
+  React.useEffect(() => {
+    setNavbarColor("");
+  }, [navbarColor]);
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}
@@ -39,10 +49,10 @@ function NavbarMenu(props) {
             data-placement="bottom"
             to="/"
             target="_blank"
-            title="Lako Do Muzike"
+            title="Teretana"
             tag={Link}
           >
-            Lako do Muzike
+            Teretana
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -73,6 +83,54 @@ function NavbarMenu(props) {
                 Oglasi
               </NavLink>
             </NavItem>
+
+            <Dropdown nav isOpen={dropdownOpenT} toggle={toggleT}>
+              <DropdownToggle nav caret>
+                Vrsta Treninga
+              </DropdownToggle>
+              <DropdownMenu className="menuBarDropdown">
+                <DropdownItem tag={Link}>Yoga</DropdownItem>
+                <DropdownItem tag={Link}>Core</DropdownItem>
+                <DropdownItem tag={Link}>Pilates</DropdownItem>
+                <DropdownItem tag={Link}>Cardio</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+
+            <NavItem>
+              <NavLink to="/o-nama" tag={Link}>
+                O nama
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink to="/kontakt" tag={Link}>
+                Kontakt
+              </NavLink>
+            </NavItem>
+
+            <Dropdown nav isOpen={dropdownOpenL} toggle={toggleL}>
+              <DropdownToggle nav caret>
+                Jezik
+              </DropdownToggle>
+              <DropdownMenu className="menuBarDropdown">
+                <DropdownItem
+                  tag={Link}
+                  onClick={() => {
+                    props.setLanguage("Srpski");
+                  }}
+                >
+                  Srpski
+                </DropdownItem>
+                <DropdownItem
+                  tag={Link}
+                  onClick={() => {
+                    props.setLanguage("English");
+                  }}
+                >
+                  Engleski
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </Nav>
         </Collapse>
       </Container>

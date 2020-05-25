@@ -14,11 +14,20 @@ import Yoga from "views/Yoga/Yoga";
 import Core from "views/Core/Core";
 import Cardio from "views/Cardio/Cardio";
 function AppRouters(props) {
+  const [language, setLanguage] = useState("Srpski");
+  const [srpski, setSrpski] = useState({
+    text: "",
+    text2: "",
+  });
+  const [english, setEnglish] = useState({
+    text: "",
+    text2: "",
+  });
   React.useEffect(() => {}, []);
 
   return (
     <div>
-      <NavBar />
+      <NavBar language={language} setLanguage={setLanguage} />
       <Switch>
         <Route exact path="/" render={(props) => <LandingPage {...props} />} />
         <Route path="/kontakt" render={(props) => <ContactPage {...props} />} />

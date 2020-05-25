@@ -17,8 +17,9 @@ function FooterBlack() {
         <Row>
           <div className="credits ml-auto">
             <span className="copyright">
-              © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> by Lavs
+              © Copyright 2020, имена аутора, Одсек за софтверско инжењерство
+              Електротехничког факултета Универзитета у Београду
+              <i className="fa fa-heart heart" /> by Aleksa voli Saru
             </span>
           </div>
         </Row>
