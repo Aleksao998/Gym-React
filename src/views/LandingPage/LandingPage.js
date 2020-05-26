@@ -10,8 +10,6 @@ function LandingPage() {
   return (
     <div>
       <LandingPageHeader />
-
-      <BlockFeature />
       <PopularTrainings />
       <InfoProfile />
       <OurTrainers />
