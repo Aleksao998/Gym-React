@@ -15,7 +15,7 @@ import Core from "views/Core/Core";
 import Cardio from "views/Cardio/Cardio";
 import Tranings from "views/Tranings/Tranings";
 import Nutritionist from "views/Nutritionist/Nutritionist";
-import Massages from "views/Masages/Masages";
+import Massages from "views/Massages/Massages";
 function AppRouters(props) {
   const [language, setLanguage] = useState("Srpski");
   const [srpski, setSrpski] = useState({
