@@ -16,6 +16,12 @@ function ContactPage(props) {
         </BreadcrumbItem>
         <BreadcrumbItem active>Kontakt</BreadcrumbItem>
       </Breadcrumb>
+
+      {props.language === "Srpski" ? (
+        <p>{props.srpski.pocetnaYoga}</p>
+      ) : (
+        <p>{props.english.pocetnaYoga}</p>
+      )}
     </div>
   );
 }

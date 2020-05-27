@@ -6,10 +6,11 @@ import InfoProfile from "./Info/Info";
 import OurTrainers from "./OurTrainer/OurTrainer";
 import PopularTrainings from "./PopularTrainings/PopularTrainings";
 
-function LandingPage() {
+function LandingPage(props) {
   return (
     <div>
       <LandingPageHeader />
+
       <PopularTrainings />
       <InfoProfile />
       <OurTrainers />
