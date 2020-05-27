@@ -147,8 +147,6 @@ function AppRouters(props) {
           srpski={srpski}
           english={english}
         />
-<<<<<<< HEAD
-=======
         <Route path="/massages" render={(props) => <Massages {...props} />} />
         <Route
           path="/astanga-joga"
@@ -158,7 +156,7 @@ function AppRouters(props) {
           path="/bakiti-joga"
           render={(props) => <BakitiJoga {...props} />}
         />
->>>>>>> origin/master
+
         <Route render={(props) => <ErrorPage404 {...props} />} />
       </Switch>
       <Footer />

@@ -9,13 +9,8 @@ import PopularTrainings from "./PopularTrainings/PopularTrainings";
 function LandingPage(props) {
   return (
     <div>
-<<<<<<< HEAD
-      <LandingPageHeader language={props.language} />
-
-      <BlockFeature />
-=======
       <LandingPageHeader />
->>>>>>> origin/master
+
       <PopularTrainings />
       <InfoProfile />
       <OurTrainers />
