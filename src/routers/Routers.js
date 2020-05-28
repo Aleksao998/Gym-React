@@ -20,6 +20,7 @@ import Massages from "views/Massages/Massages";
 import AstangaJoga from "views/AstangaJoga/AstangaJoga";
 import BakitiJoga from "views/BakitiJoga/BakitiJoga";
 
+import ScrollToTop from "../components/Sroll/Scroll";
 function AppRouters(props) {
   const [language, setLanguage] = useState("English");
   const [srpski, setSrpski] = useState({
@@ -35,6 +36,7 @@ function AppRouters(props) {
   return (
     <div>
       <NavBar language={language} setLanguage={setLanguage} />
+      <ScrollToTop />
       <Switch>
         <Route
           exact

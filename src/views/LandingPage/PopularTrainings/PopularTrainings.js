@@ -1,9 +1,10 @@
 import React from "react";
-import image1 from "../../../assets/img/img_2.jpg";
-import image2 from "../../../assets/img/img_3.jpg";
-import image3 from "../../../assets/img/img_4.jpg";
-import image4 from "../../../assets/img/img_5.jpg";
-function PopularTrainings() {
+import { withRouter } from "react-router-dom";
+import image1 from "../../../assets/img/bahkti.jpg";
+import image2 from "../../../assets/img/klasicniP.jpg";
+import image3 from "../../../assets/img/core-30.jpg";
+import image4 from "../../../assets/img/trcanje.jpg";
+function PopularTrainings(props) {
   return (
     <div class="site-section">
       <div class="container">
@@ -26,8 +27,13 @@ function PopularTrainings() {
                   Fuga, voluptate.
                 </p>
                 <p>
-                  <a href="#" class="btn btn-primary text-white px-4">
-                    <span class="caption">Learn More</span>
+                  <a
+                    onClick={() => {
+                      props.history.push("/yoga");
+                    }}
+                    class="btn btn-primary text-white px-4"
+                  >
+                    <span class="caption">Detaljnije</span>
                   </a>
                 </p>
               </div>
@@ -43,8 +49,13 @@ function PopularTrainings() {
                   Fuga, voluptate.
                 </p>
                 <p>
-                  <a href="#" class="btn btn-primary text-white px-4">
-                    <span class="caption">Learn More</span>
+                  <a
+                    onClick={() => {
+                      props.history.push("/core");
+                    }}
+                    class="btn btn-primary text-white px-4"
+                  >
+                    <span class="caption">Detaljnije</span>
                   </a>
                 </p>
               </div>
@@ -61,8 +72,13 @@ function PopularTrainings() {
                   Fuga, voluptate.
                 </p>
                 <p>
-                  <a href="#" class="btn btn-primary text-white px-4">
-                    <span class="caption">Learn More</span>
+                  <a
+                    onClick={() => {
+                      props.history.push("/pilates");
+                    }}
+                    class="btn btn-primary text-white px-4"
+                  >
+                    <span class="caption">Detaljnije</span>
                   </a>
                 </p>
               </div>
@@ -78,8 +94,13 @@ function PopularTrainings() {
                   Fuga, voluptate.
                 </p>
                 <p>
-                  <a href="#" class="btn btn-primary text-white px-4">
-                    <span class="caption">Learn More</span>
+                  <a
+                    onClick={() => {
+                      props.history.push("/cardio");
+                    }}
+                    class="btn btn-primary text-white px-4"
+                  >
+                    <span class="caption">Detaljnije</span>
                   </a>
                 </p>
               </div>
@@ -91,4 +112,4 @@ function PopularTrainings() {
   );
 }
 
-export default PopularTrainings;
+export default withRouter(PopularTrainings);
