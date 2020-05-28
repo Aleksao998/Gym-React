@@ -83,14 +83,20 @@ function NavbarMenu(props) {
                 Usluge
               </DropdownToggle>
               <DropdownMenu className="menuBarDropdown">
-                <DropdownItem tag={Link}>Treninzi</DropdownItem>
-                <DropdownItem tag={Link}>Nutricinista</DropdownItem>
-                <DropdownItem tag={Link}>Masaze</DropdownItem>
+                <DropdownItem to="/traning" tag={Link}>
+                  Treninzi
+                </DropdownItem>
+                <DropdownItem to="/nutritionist" tag={Link}>
+                  Nutricinista
+                </DropdownItem>
+                <DropdownItem to="/massages" tag={Link}>
+                  Masaze
+                </DropdownItem>
               </DropdownMenu>
             </Dropdown>
 
             <NavItem>
-              <NavLink to="/ads" tag={Link}>
+              <NavLink to="/traning" tag={Link}>
                 Zakazivanje Treninga
               </NavLink>
             </NavItem>

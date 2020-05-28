@@ -11,7 +11,7 @@ function LandingPage(props) {
     <div>
       <LandingPageHeader />
 
-      <PopularTrainings />
+      <PopularTrainings {...props} />
       <InfoProfile />
       <OurTrainers />
     </div>
