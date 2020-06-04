@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../assets/img/aJoga1.jpg";
-import image2 from "../../assets/img/aJoga2.jpg";
-import image3 from "../../assets/img/aJoga3.jpg";
-import image4 from "../../assets/img/aJoga4.jpg";
+import image from "../../assets/img/step1.jpg";
+import image2 from "../../assets/img/step3.jpg";
+import image3 from "../../assets/img/step2.jpg";
+import image4 from "../../assets/img/step4.jpg";
 import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
 import { Row, Container, Col } from "reactstrap";
-function AstangaJoga() {
+function StepTrening() {
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -26,15 +26,18 @@ function AstangaJoga() {
       <div class="row" style={{ marginTop: "20px" }}>
         <div class="col-lg-5 sm-12 ml-auto">
           <h2 class="site-section-heading mb-3" style={{ padding: "10px" }}>
-            AŠTANGA JOGA
+            STEP TRENING
           </h2>
           <p style={{ padding: "10px" }}>
-            Znate, to sa jogom zna biti vrlo zapleteno jer je teško uhvatiti šta
-            od čega potiče koje šta započeo i šta je ko kako nazvao. Dakle, kada
-            smo govorili o Patanđaliju i njegovom sitemu „joge osam udova“, tada
-            je bilo reči o dve hiljade godina starom sistemu joge koji se zvao
-            Aštanga joga. Kada se danas kaže „aštanga“, najčešće se misli na
-            Aštanga-Vinjasa jogu.
+            Step aerobik je koreografski trening sa mnogo koracanja i gibanja,
+            sto daje takodje, formu plesu, ali se sve vreme koristi platforma za
+            «penjanje». Platforma se moze prilagoditi na nekoliko razlicitih
+            visina, sto omogucava rad vezbacima razlicite utreniranosti. Trening
+            se sastoji iz vise vrsta koraka koji se mogu kombinovati sa radom
+            ruku i uz dodatna malo opterecenje dvorucnih tegova, pa osim
+            izdrzljivosti i sagorevanja kalorija, radi se i na tonusu misica.
+            Postoji veliko interesovanje za ovu vrstu aerobika, koju bodibilderi
+            koriste kao kardio-trening.
             <br /> <br />
             To je sistem joge koji dinamično povezuje inače statitične klasične
             joga položaje. Aštanga/Vinjasa je vrlo zahtevan sistem i to je „joga
@@ -50,7 +53,7 @@ function AstangaJoga() {
           <iframe
             width="80%"
             height="350"
-            src="https://www.youtube.com/embed/1Krp4W0TlAU"
+            src="https://www.youtube.com/embed/7LtXAhpSPmg"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -73,48 +76,48 @@ function AstangaJoga() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color">Aštanga Joga</th>
-              <th></th>
-              <th class="color">Aštanga Joga</th>
+              <th class="color">Step trening</th>
               <th></th>
               <th></th>
+              <th></th>
+              <th class="color">Step trening</th>
               <th></th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
+              <th class="color">Step trening</th>
+              <th></th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
               <th></th>
-              <th class="color"> Aštanga Joga</th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
+              <th class="color">Step trening</th>
+              <th class="color">Step trening</th>
               <th></th>
-              <th></th>
+              <th class="color">Step trening</th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
+              <th class="color">Step trening</th>
               <th></th>
+              <th class="color">Step trening</th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
+              <th class="color">Step trening</th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
               <th></th>
               <th></th>
-              <th class="color">Aštanga Joga</th>
+              <th></th>
             </tr>
           </table>
         </div>
@@ -122,4 +125,4 @@ function AstangaJoga() {
     </div>
   );
 }
-export default AstangaJoga;
+export default StepTrening;

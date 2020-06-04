@@ -19,6 +19,15 @@ import BakramJoga from "views/BakramJoga/BakramJoga";
 import Massages from "views/Massages/Massages";
 import AstangaJoga from "views/AstangaJoga/AstangaJoga";
 import BakitiJoga from "views/BakitiJoga/BakitiJoga";
+import StartIt from "views/StartIt/StartIt";
+import Running from "views/Running/Running";
+import StepTrening from "views/StepTrening/StepTrening";
+import Pump from "views/Pump/Pump";
+import ForceTrening from "views/ForceTrening/ForceTrening";
+import Core30 from "views/Core30/Core30";
+import StottPilates from "views/StottPilates/StottPilates";
+import KlasicanPilates from "views/KlasicanPilates/KlasicanPilates";
+import PerformerPilates from "views/PerformerPilates/PerformerPilates";
 
 import ScrollToTop from "../components/Sroll/Scroll";
 function AppRouters(props) {
@@ -157,6 +166,30 @@ function AppRouters(props) {
         <Route
           path="/bakiti-joga"
           render={(props) => <BakitiJoga {...props} />}
+        />
+        <Route path="/startit" render={(props) => <StartIt {...props} />} />
+        <Route path="/running" render={(props) => <Running {...props} />} />
+        <Route
+          path="/step-trening"
+          render={(props) => <StepTrening {...props} />}
+        />
+        <Route path="/pump" render={(props) => <Pump {...props} />} />
+        <Route
+          path="/force-trening"
+          render={(props) => <ForceTrening {...props} />}
+        />
+        <Route path="/core30" render={(props) => <Core30 {...props} />} />
+        <Route
+          path="/stott-pilates"
+          render={(props) => <StottPilates {...props} />}
+        />
+        <Route
+          path="/klasican-pilates"
+          render={(props) => <KlasicanPilates {...props} />}
+        />
+        <Route
+          path="/performer-pilates"
+          render={(props) => <PerformerPilates {...props} />}
         />
 
         <Route render={(props) => <ErrorPage404 {...props} />} />

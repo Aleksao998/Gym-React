@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../assets/img/bakram4.jpg";
-import image2 from "../../assets/img/bakram2.jpg";
-import image3 from "../../assets/img/bakram3.jpg";
-import image4 from "../../assets/img/bakram4.jpg";
+import image from "../../assets/img/PUMP5.jpg";
+import image2 from "../../assets/img/PUMP6.jpg";
+import image3 from "../../assets/img/PUMP7.jpg";
+import image4 from "../../assets/img/PUMP8.jpg";
 import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
 import { Row, Container, Col } from "reactstrap";
-function BakramJoga() {
+function Pump() {
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -24,25 +24,34 @@ function BakramJoga() {
       </div>
 
       <div class="row" style={{ marginTop: "20px" }}>
-        <div class="col-lg-5 ml-auto">
-          <h2 class="site-section-heading mb-3">BIKRAM JOGA</h2>
-          <p>
-            Bikram jogu je osnovao Bikram Čouduri (vidimo ga na slici sa dvoje
-            vežbača) je „vrela joga“ u kojoj se prostorija zagreje na 30 – 40 C
-            pa se uz intenzivno vežbanje dobije i efekat saune. Ta joga se vežba
-            u serijama od kojih je najpoznatija tkzv Početna serija koja ima 26
-            položaja i dve vsrte disanja. Vežbanje joge u tako zagrejanim
-            prostorijama izaziva jako znojenje pa se veruje da ona oslobađa telo
-            od otrova i čini ga fleksibilnim. Postoje i rizici kod takvog
-            vežbanja i to počevši od nesvestica usled dehidracije pa preko
-            povreda sve do srčanih udara
+        <div class="col-lg-5 sm-12 ml-auto">
+          <h2 class="site-section-heading mb-3" style={{ padding: "10px" }}>
+            PUMP TRENING
+          </h2>
+          <p style={{ padding: "10px" }}>
+            PUMP je originalni trening sa šipkom i tegovima koji oblikuje i jača
+            telo. Trenutno se sprovodi u više od 13 000 klubova širom sveta.
+            Najpopularniji je progam u svetu. Globalni fenomen.
+            <br /> PUMP je trening sa opterećenjem i stoga je idealan za sve one
+            koji svom uobičajenom aerobnom treningu žele da dodaju i trening
+            snage. Kombinacija sjajne muzike, neuobičajene koreografije i
+            inspirativnih instruktora motiviše vežbače do poslednjeg minuta
+            treninga.
+            <br /> PUMP je jedinstvena formula kojom ćete oblikovati figuru i
+            izgubiti višak masnoće, a ujedno ojačati telo i samopouzdanje podići
+            na viši nivo. Želite snažno, oblikovano i fit telo, a da pri tom ne
+            dobijete neželjeni obim? BODYPUMP može doneti rezultate kojima
+            težite i transformisati vaše telo primenemom efekta ponavljanja. Uz
+            800 ponavljanja po treningu bićete vitki, snažni i nezaustavljivi! U
+            uobičajenom pedesetpetominutnom času koristimo specifičnu muziku
+            koja vas motiviše i vodi kroz čas uz maksimalne efekte.
           </p>
         </div>
-        <div class="col-lg-6 " style={{ margin: "40px" }}>
+        <div class="col-lg-6 " style={{ margin: "40px", paddingLeft: "10px" }}>
           <iframe
-            width="100%"
-            height="300px"
-            src="https://www.youtube.com/embed/Ocg3InAEZMU"
+            width="80%"
+            height="350"
+            src="https://www.youtube.com/embed/6Ux2x2mGGl4"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -67,46 +76,46 @@ function BakramJoga() {
               <th>10:15-12:00</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color"> PUMP </th>
               <th></th>
               <th></th>
-              <th></th>
+              <th class="color"> PUMP </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
+              <th class="color"> PUMP </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color"> PUMP </th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color">Bakram Joga</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color"> PUMP </th>
               <th></th>
+              <th class="color"> PUMP </th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color"> PUMP </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
+              <th class="color"> PUMP </th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
+              <th class="color"> PUMP </th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color"> PUMP </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
             </tr>
           </table>
         </div>
@@ -114,4 +123,4 @@ function BakramJoga() {
     </div>
   );
 }
-export default BakramJoga;
+export default Pump;
