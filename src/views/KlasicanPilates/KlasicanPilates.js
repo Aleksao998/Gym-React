@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../assets/img/bakram4.jpg";
-import image2 from "../../assets/img/bakram2.jpg";
-import image3 from "../../assets/img/bakram3.jpg";
-import image4 from "../../assets/img/bakram4.jpg";
+import image from "../../assets/img/pilates1.jpg";
+import image2 from "../../assets/img/pilates2.jpg";
+import image3 from "../../assets/img/pilates3.jpg";
+import image4 from "../../assets/img/pilates4.jpg";
 import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
 import { Row, Container, Col } from "reactstrap";
-function BakramJoga() {
+function KlasicanPilates() {
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -24,25 +24,34 @@ function BakramJoga() {
       </div>
 
       <div class="row" style={{ marginTop: "20px" }}>
-        <div class="col-lg-5 ml-auto">
-          <h2 class="site-section-heading mb-3">BIKRAM JOGA</h2>
-          <p>
-            Bikram jogu je osnovao Bikram Čouduri (vidimo ga na slici sa dvoje
-            vežbača) je „vrela joga“ u kojoj se prostorija zagreje na 30 – 40 C
-            pa se uz intenzivno vežbanje dobije i efekat saune. Ta joga se vežba
-            u serijama od kojih je najpoznatija tkzv Početna serija koja ima 26
-            položaja i dve vsrte disanja. Vežbanje joge u tako zagrejanim
-            prostorijama izaziva jako znojenje pa se veruje da ona oslobađa telo
-            od otrova i čini ga fleksibilnim. Postoje i rizici kod takvog
-            vežbanja i to počevši od nesvestica usled dehidracije pa preko
-            povreda sve do srčanih udara
+        <div class="col-lg-5 sm-12 ml-auto">
+          <h2 class="site-section-heading mb-3" style={{ padding: "10px" }}>
+            KLASICAN PILATES
+          </h2>
+          <p style={{ padding: "10px" }}>
+            Pilates predstavlja sistem vežbi istezanja tela i snage koji je
+            prije devedeset godina razvio Joseph H. Pilates.
+            <br /> Pilatesom se jačaju i oblikuju mišići, ispravlja se drzanje
+            tela, daje gipkost, poboljšava ravnoteža, te usavršava oblik tela.
+            <br />
+            <br />
+            Pilates je razvijen da bi se njime stvorilo zdravo telo, zdrav um i
+            zdrav zivot. Pilates filozofija usmerena je na uvežbavanje tela i
+            uma da deluju zajedno prema ostvarenju sveukupne telesne kondicije.
+            Iako je rođen u znatno mirnijem vremenu nego što je današnje,
+            J.Pilates je razumeo u kolikoj meri dnevni raspored opterecuje telo
+            i um, te je težio promeniti naše ponašanje kako bismo pri vežbanju
+            imali na umu učinkovitost u obavljanju svakodnevnih zadataka.
+            <br />
+            Vežbe pilatesa ne zahtevaju nikakvu opremu i mogu se izvoditi u
+            svakom prostoru gdje se telo može udobno ispružiti.
           </p>
         </div>
-        <div class="col-lg-6 " style={{ margin: "40px" }}>
+        <div class="col-lg-6 " style={{ margin: "40px", paddingLeft: "10px" }}>
           <iframe
-            width="100%"
-            height="300px"
-            src="https://www.youtube.com/embed/Ocg3InAEZMU"
+            width="80%"
+            height="350px"
+            src="https://www.youtube.com/embed/OC5U5hazdY4"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -65,48 +74,48 @@ function BakramJoga() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
+              <th class="color">Klasican pilates</th>
+              <th></th>
+              <th class="color">Klasican pilates</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
-              <th></th>
-              <th></th>
-              <th></th>
+              <th class="color">Klasican pilates</th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
+              <th class="color">Klasican pilates</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th></th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color">Bakram Joga</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">Klasican pilates</th>
               <th></th>
+              <th class="color">Klasican pilates</th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
+              <th class="color">Klasican pilates</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
+              <th class="color">Klasican pilates</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">Klasican pilates</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">Klasican pilates</th>
             </tr>
           </table>
         </div>
@@ -114,4 +123,4 @@ function BakramJoga() {
     </div>
   );
 }
-export default BakramJoga;
+export default KlasicanPilates;

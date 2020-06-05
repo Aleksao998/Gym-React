@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../../assets/img/core.jpg";
-function Core() {
+import { withRouter } from "react-router-dom";
+function Core(props) {
   return (
     <div class="site-section" style={{ marginTop: "100px" }}>
       <div class="container">
@@ -39,7 +40,12 @@ function Core() {
                 kondicije.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/pump");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -55,7 +61,12 @@ function Core() {
                 i ojačajte mišiće celog tela.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/force-trening");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -72,7 +83,12 @@ function Core() {
                 oduvek želeli. I vaša leđa će vam biti zahvalna.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/core30");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -84,4 +100,4 @@ function Core() {
   );
 }
 
-export default Core;
+export default withRouter(Core);

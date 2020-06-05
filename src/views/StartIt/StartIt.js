@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../assets/img/bakram4.jpg";
-import image2 from "../../assets/img/bakram2.jpg";
-import image3 from "../../assets/img/bakram3.jpg";
-import image4 from "../../assets/img/bakram4.jpg";
+import image from "../../assets/img/startit1.jpg";
+import image2 from "../../assets/img/startit2.jpg";
+import image3 from "../../assets/img/startit3.jpg";
+import image4 from "../../assets/img/startit4.jpg";
 import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
 import { Row, Container, Col } from "reactstrap";
-function BakramJoga() {
+function StartIt() {
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -24,25 +24,29 @@ function BakramJoga() {
       </div>
 
       <div class="row" style={{ marginTop: "20px" }}>
-        <div class="col-lg-5 ml-auto">
-          <h2 class="site-section-heading mb-3">BIKRAM JOGA</h2>
-          <p>
-            Bikram jogu je osnovao Bikram Čouduri (vidimo ga na slici sa dvoje
-            vežbača) je „vrela joga“ u kojoj se prostorija zagreje na 30 – 40 C
-            pa se uz intenzivno vežbanje dobije i efekat saune. Ta joga se vežba
-            u serijama od kojih je najpoznatija tkzv Početna serija koja ima 26
-            položaja i dve vsrte disanja. Vežbanje joge u tako zagrejanim
-            prostorijama izaziva jako znojenje pa se veruje da ona oslobađa telo
-            od otrova i čini ga fleksibilnim. Postoje i rizici kod takvog
-            vežbanja i to počevši od nesvestica usled dehidracije pa preko
-            povreda sve do srčanih udara
+        <div class="col-lg-5 sm-12 ml-auto">
+          <h2 class="site-section-heading mb-3" style={{ padding: "10px" }}>
+            START IT TRENING
+          </h2>
+          <p style={{ padding: "10px" }}>
+            Start IT treninzi se sastoje od kratkih ali jakih intervala fizičke
+            aktivnosti koji su praćeni adekvatnim odmorom između njih. Trajanje
+            intervala može da bude u opsegu od 10–60 sekundi. E sada, koliko
+            ćete intervala izvesti u toku treninga, koliko ćete pauzirati
+            između, koliki će biti njihov intenzitet i koju ćete fizičku
+            aktivnost izabrati, zavisi od nivoa vaše fizičke pripremljenosti.
+            Najčešće korišćeni i sigurno najefikasniji su intervali trčanja,
+            mada je moguće izvoditi ove treninge u plivanju, biciklizmu,
+            veslanju itd. U svakom slučaju, izabraćete onu aktivnost u kojoj ste
+            najbolji, jer će vam to dati najveće mogućnosti da napredujete.
+            <br /> <br />
           </p>
         </div>
-        <div class="col-lg-6 " style={{ margin: "40px" }}>
+        <div class="col-lg-6 " style={{ margin: "40px", paddingLeft: "10px" }}>
           <iframe
-            width="100%"
-            height="300px"
-            src="https://www.youtube.com/embed/Ocg3InAEZMU"
+            width="80%"
+            height="350"
+            src="https://www.youtube.com/embed/CBWQGb4LyAM"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -65,48 +69,48 @@ function BakramJoga() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
+              <th class="color">StartIt trening</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
-              <th></th>
+              <th class="color">StartIt trening</th>
               <th></th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
+              <th class="color">StartIt trening</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th></th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color">Bakram Joga</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">StartIt trening</th>
+              <th></th>
               <th></th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">StartIt trening</th>
+              <th></th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
+              <th class="color">StartIt trening</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th class="color">StartIt trening</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
             </tr>
           </table>
         </div>
@@ -114,4 +118,4 @@ function BakramJoga() {
     </div>
   );
 }
-export default BakramJoga;
+export default StartIt;
