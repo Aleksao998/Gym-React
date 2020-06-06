@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../../assets/img/cardio.jpg";
-import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
-function Cardio() {
+import { withRouter } from "react-router-dom";
+function Cardio(props) {
   return (
     <div class="site-section" style={{ marginTop: "100px" }}>
       <div class="container">
@@ -37,7 +37,12 @@ function Cardio() {
                 lagano i puni energije.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/startit");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -50,7 +55,12 @@ function Cardio() {
               </h2>
               <p>Trčanje ceo trening sa intervalima odmora.</p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/running");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -66,7 +76,12 @@ function Cardio() {
                 se sa step klupicom uz koreografiju.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/step-trening");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -78,4 +93,4 @@ function Cardio() {
   );
 }
 
-export default Cardio;
+export default withRouter(Cardio);

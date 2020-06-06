@@ -36,13 +36,14 @@ function Trainings(props) {
                 <p>Trajanje:45min</p>
                 <p>Nivo: 4</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Bikram jogu je osnovao Bikram Čouduri (vidimo ga na slici sa
+                  dvoje vežbača) je „vrela joga“...
                 </p>
+
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/bakram-joga");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -60,13 +61,14 @@ function Trainings(props) {
                 <p>Trajanje:55min</p>
                 <p>Nivo: 3</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  STOTT PILATES se može vežbati čitavog života, od detinjstva do
+                  duboke starosti...
                 </p>
+
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/stott-pilates");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -85,13 +87,13 @@ function Trainings(props) {
                 <p>Trajanje:65min</p>
                 <p>Nivo: 5</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  PUMP je originalni trening sa šipkom i tegovima koji oblikuje
+                  i jača telo...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/pump");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -109,13 +111,13 @@ function Trainings(props) {
                 <p>Trajanje:35min</p>
                 <p>Nivo: 3</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Start IT treninzi se sastoje od kratkih ali jakih intervala
+                  fizičke aktivnosti...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/startit");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -136,13 +138,13 @@ function Trainings(props) {
                 <p>Trajanje:45min</p>
                 <p>Nivo: 4</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Znate, to sa jogom zna biti vrlo zapleteno jer je teško
+                  uhvatiti šta od čega potiče..
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/astanga-joga");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -160,13 +162,13 @@ function Trainings(props) {
                 <p>Trajanje:35min</p>
                 <p>Nivo: 2</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Pilates predstavlja sistem vežbi istezanja tela i snage koji
+                  je prije devedese...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/klasican-pilates");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -185,13 +187,13 @@ function Trainings(props) {
                 <p>Trajanje:55min</p>
                 <p>Nivo: 4</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Core, jezgro ili središte čine mišići oko kukova, trbušni
+                  mišići, mišići leđa i ramena...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/force-trening");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -209,13 +211,13 @@ function Trainings(props) {
                 <p>Trajanje:65min</p>
                 <p>Nivo: 3</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Redovnim vežbanjem, trčanjem ćete poboljšati svoje zdravstveno
+                  stanje..
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/running");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -232,17 +234,17 @@ function Trainings(props) {
             <div class="media-image">
               <img src={bahkti} alt="Image" class="img-fluid" />
               <div class="media-image-body">
-                <h2>Bakti</h2>
+                <h2>Bakiti</h2>
                 <p>Trajanje:60min</p>
                 <p>Nivo: 2</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Bakti znači ljubav i predanost Bogu i njegovoj kreaciji,
+                  poštovanje i pažnju...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/bakiti-joga");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -260,13 +262,13 @@ function Trainings(props) {
                 <p>Trajanje:120min</p>
                 <p>Nivo: 3</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Pilates je metoda vežbanja koju je osmislio Joseph Pilates.
+                  Sama ideja o reformeru...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/performer-pilates");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -284,13 +286,13 @@ function Trainings(props) {
                 <p>Trajanje:30min</p>
                 <p>Nivo: 5</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Centralne mišićne strukture trupa (eng. core) predstavljaju
+                  osnovu svakog pokreta...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/core30");
                     }}
                     class="btn btn-primary text-white px-4"
                   >
@@ -308,13 +310,13 @@ function Trainings(props) {
                 <p>Trajanje:60min</p>
                 <p>Nivo: 2</p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fuga, voluptate.
+                  Step aerobik je koreografski trening sa mnogo koracanja i
+                  gibanja, sto daje takodje...
                 </p>
                 <p className="text-center mt-3">
                   <a
                     onClick={() => {
-                      props.history.push("/");
+                      props.history.push("/step-trening");
                     }}
                     class="btn btn-primary text-white px-4"
                   >

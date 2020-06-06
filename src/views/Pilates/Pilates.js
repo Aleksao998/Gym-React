@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../../assets/img/pilates.jpg";
-
-function Pilates() {
+import { withRouter } from "react-router-dom";
+function Pilates(props) {
   return (
     <div class="site-section" style={{ marginTop: "100px" }}>
       <div class="container">
@@ -38,7 +38,12 @@ function Pilates() {
                 prilagođavanja specifičnim zahtevima svakog pojedinca.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/stott-pilates");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -56,7 +61,12 @@ function Pilates() {
                 svom telu, dobru posturu i lake i graciozne pokrete.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/klasican-pilates");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -75,7 +85,12 @@ function Pilates() {
                 pelvisa kao i ramenog pojasa.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/performer-pilates");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -87,4 +102,4 @@ function Pilates() {
   );
 }
 
-export default Pilates;
+export default withRouter(Pilates);
