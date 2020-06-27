@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function StottPilates() {
+function StottPilates(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -45,6 +45,7 @@ function StottPilates() {
     const { value } = event.target;
     setComment(value);
   };
+  const { slMestaSt, setSlMestaSt } = props;
   /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
@@ -122,25 +123,121 @@ function StottPilates() {
               <th>10:15-12:00</th>
               <th></th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates{slMestaSt[0]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Subota",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[1]}
+              </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Ponedeljak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[2]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Cetvratk",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[3]}
+              </th>
               <th></th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Ponedeljak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[4]}
+              </th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Sreda",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[5]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -151,17 +248,81 @@ function StottPilates() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Stott pilates</th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Petak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[6]}
+              </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Subota",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[7]}
+              </th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Utorak",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[8]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Stott pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    9,
+                    setSlMestaSt,
+                    slMestaSt,
+                    "StottPilates",
+                    "Subota",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Stott pilates {slMestaSt[9]}
+              </th>
             </tr>
           </table>
         </div>

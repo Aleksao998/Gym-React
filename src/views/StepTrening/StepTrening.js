@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function StepTrening() {
+function StepTrening(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -45,6 +45,7 @@ function StepTrening() {
     const { value } = event.target;
     setComment(value);
   };
+  const { slMestaSte, setSlMestaSte } = props;
   /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
@@ -122,11 +123,43 @@ function StepTrening() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[0]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Petak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[1]}
+              </th>
               <th></th>
             </tr>
             <tr>
@@ -134,7 +167,23 @@ function StepTrening() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Cetvrtak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[2]}
+              </th>
               <th></th>
               <th></th>
             </tr>
@@ -142,24 +191,120 @@ function StepTrening() {
               <th>02:15-4:00</th>
               <th></th>
               <th></th>
-              <th class="color">Step trening</th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Sreda",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[3]}
+              </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Cetvrtak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[4]}
+              </th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Subota",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[5]}
+              </th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Sreda",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[6]}
+              </th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Petak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[7]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
-              <th class="color">Step trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaSte,
+                    slMestaSte,
+                    "StepCardio",
+                    "Sreda",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Step Cardio{slMestaSte[8]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
