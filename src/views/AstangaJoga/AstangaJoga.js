@@ -48,18 +48,7 @@ function AstangaJoga(props) {
   };
   /*Copy Up*/
   const { slMestaAs, setSlMestaAs } = props;
-  const [reset, setReset] = useState(true);
-  const zakazi = (index, type, day, timeFrom, timeTo) => {
-    if (slMestaAs[index] != 0) {
-      let newArr = slMestaAs; // copying the old datas array
-      newArr[index] = newArr[index] - 1;
-      console.log(newArr);
-      setSlMestaAs(newArr);
-      setReset(!reset);
-      var arr = props.mojiTermini;
-      props.setMojiTermini(arr);
-    }
-  };
+
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -136,7 +125,15 @@ function AstangaJoga(props) {
               <th
                 class="color"
                 onClick={() =>
-                  zakazi(0, "Astanga", "Ponedeljak", "10:15", "12:00")
+                  props.zakazi(
+                    0,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
                 }
               >
                 Aštanga Joga {slMestaAs[0]}
@@ -144,7 +141,17 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(1, "Astanga", "Sreda", "10:15", "12:00")}
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[1]}
               </th>
@@ -158,14 +165,34 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(2, "Astanga", "Sreda", "12:15", "02:00")}
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Sreda",
+                    "12:15",
+                    "02:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[2]}
               </th>
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(3, "Astanga", "Petak", "12:15", "02:00")}
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Petak",
+                    "12:15",
+                    "02:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[3]}
               </th>
@@ -176,7 +203,17 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(4, "Astanga", "Utokak", "02:15", "4:00")}
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Utokak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
               >
                 {" "}
                 Aštanga Joga {slMestaAs[4]}
@@ -185,7 +222,15 @@ function AstangaJoga(props) {
               <th
                 class="color"
                 onClick={() =>
-                  zakazi(5, "Astanga", "Cetvrtak", "02:15", "4:00")
+                  props.zakazi(
+                    5,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Cetvrtak",
+                    "02:15",
+                    "4:00"
+                  )
                 }
               >
                 Aštanga Joga {slMestaAs[5]}
@@ -198,7 +243,17 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(6, "Astanga", "Utorak", "04:15", "6:00")}
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Utorak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[6]}
               </th>
@@ -206,7 +261,15 @@ function AstangaJoga(props) {
               <th
                 class="color"
                 onClick={() =>
-                  zakazi(7, "Astanga", "Cetvrtak", "04:15", "6:00")
+                  props.zakazi(
+                    7,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Cetvrtak",
+                    "04:15",
+                    "6:00"
+                  )
                 }
               >
                 Aštanga Joga {slMestaAs[7]}
@@ -220,7 +283,17 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(8, "Astanga", "Sreda", "06:15", "08:00")}
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Sreda",
+                    "06:15",
+                    "08:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[8]}
               </th>
@@ -228,7 +301,17 @@ function AstangaJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(9, "Astanga", "Subota", "06:15", "08:00")}
+                onClick={() =>
+                  props.zakazi(
+                    9,
+                    setSlMestaAs,
+                    slMestaAs,
+                    "Astanga",
+                    "Subota",
+                    "06:15",
+                    "08:00"
+                  )
+                }
               >
                 Aštanga Joga {slMestaAs[9]}
               </th>

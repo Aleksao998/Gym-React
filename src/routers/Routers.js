@@ -44,8 +44,32 @@ function AppRouters(props) {
   React.useEffect(() => {}, []);
 
   //zakazivanje
+  const [reset, setReset] = useState(true);
   const [slMestaAs, setSlMestaAs] = useState([1, 5, 4, 2, 8, 9, 2, 5, 8, 1]);
   const [slMestaBa, setSlMestaBa] = useState([1, 5, 4, 2, 8, 9, 2, 5, 8]);
+  const [slMestaBi, setSlMestaBi] = useState([5, 3, 1, 2, 6, 2, 3, 3, 4]);
+
+  const [slMestaPu, setSlMestaPu] = useState([1, 5, 3, 7, 9, 4, 2, 6, 8, 1]);
+  const [slMestaFo, setSlMestaFo] = useState([5, 7, 6, 3, 4, 9, 8, 7, 4, 5, 7]);
+  const [slMestaCo, setSlMestaCo] = useState([1, 6, 5, 7, 9, 8, 2, 1, 4, 5]);
+
+  const [slMestaSt, setSlMestaSt] = useState([1, 6, 5, 7, 9, 8, 2, 1, 4, 5]);
+  const [slMestaCl, setSlMestaCl] = useState([1, 6, 5, 7, 9, 8, 2, 1, 4, 5]);
+  const [slMestaPe, setSlMestaPe] = useState([1, 6, 5, 7, 9, 8, 2, 1, 4]);
+
+  const [slMestaSta, setSlMestaSta] = useState([1, 6, 5, 7, 9, 8, 2]);
+  const [slMestaRu, setSlMestaRu] = useState([1, 2, 3, 5, 4, 3, 2, 6]);
+  const [slMestaSte, setSlMestaSte] = useState([1, 2, 3, 5, 4, 3, 2, 6, 9]);
+
+  const zakazi = (index, set, value, type, day, timeFrom, timeTo) => {
+    if (value[index] != 0) {
+      let newArr = value; // copying the old datas array
+      newArr[index] = newArr[index] - 1;
+      console.log(newArr);
+      set(newArr);
+      setReset(!reset);
+    }
+  };
   return (
     <div>
       <NavBar language={language} setLanguage={setLanguage} />
@@ -145,6 +169,9 @@ function AppRouters(props) {
           render={(props) => (
             <BakramJoga
               {...props}
+              slMestaBi={slMestaBi}
+              setSlMestaBi={setSlMestaBi}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -174,6 +201,7 @@ function AppRouters(props) {
           render={(props) => (
             <AstangaJoga
               {...props}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
               slMestaAs={slMestaAs}
@@ -198,6 +226,9 @@ function AppRouters(props) {
           render={(props) => (
             <StartIt
               {...props}
+              slMestaSta={slMestaSta}
+              setSlMestaSta={setSlMestaSta}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -208,6 +239,9 @@ function AppRouters(props) {
           render={(props) => (
             <Running
               {...props}
+              slMestaRu={slMestaRu}
+              setSlMestaRu={setSlMestaRu}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -218,6 +252,9 @@ function AppRouters(props) {
           render={(props) => (
             <StepTrening
               {...props}
+              slMestaSte={slMestaSte}
+              setSlMestaSte={setSlMestaSte}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -228,6 +265,9 @@ function AppRouters(props) {
           render={(props) => (
             <Pump
               {...props}
+              slMestaPu={slMestaPu}
+              setSlMestaPu={setSlMestaPu}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -238,6 +278,9 @@ function AppRouters(props) {
           render={(props) => (
             <ForceTrening
               {...props}
+              slMestaFo={slMestaFo}
+              setSlMestaFo={setSlMestaFo}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -248,6 +291,9 @@ function AppRouters(props) {
           render={(props) => (
             <Core30
               {...props}
+              slMestaCo={slMestaCo}
+              setSlMestaCo={setSlMestaCo}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -259,6 +305,9 @@ function AppRouters(props) {
           render={(props) => (
             <StottPilates
               {...props}
+              slMestaSt={slMestaSt}
+              setSlMestaSt={setSlMestaSt}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -269,6 +318,9 @@ function AppRouters(props) {
           render={(props) => (
             <KlasicanPilates
               {...props}
+              slMestaCl={slMestaCl}
+              setSlMestaCl={setSlMestaCl}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
@@ -279,6 +331,9 @@ function AppRouters(props) {
           render={(props) => (
             <PerformerPilates
               {...props}
+              slMestaPe={slMestaPe}
+              setSlMestaPe={setSlMestaPe}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
             />
