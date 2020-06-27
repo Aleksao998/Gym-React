@@ -7,14 +7,14 @@ import image4 from "../../assets/img/bakram4.jpg";
 import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
-function BakramJoga() {
+function BakramJoga(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [totalRating, setTotalRating] = useState(0);
   const [uk, setUk] = useState(1);
-
+  const { slMestaBi, setSlMestaBi, zakazi } = props;
   const postavi = () => {
     var array = [];
     array = comments;
@@ -112,7 +112,22 @@ function BakramJoga() {
               <th>10:15-12:00</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[0]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -121,37 +136,157 @@ function BakramJoga() {
               <th>12:15-2:00</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Sreda",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[1]}
+              </th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Petak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[2]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Ponedeljak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[3]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Cetvrtak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[4]}
+              </th>
               <th></th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Utorak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                Bakram Joga,{slMestaBi[5]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Petak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[6]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Sreda",
+                    "06:15",
+                    "08:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[7]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Bakram Joga</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaBi,
+                    slMestaBi,
+                    "Bikram ",
+                    "Subota",
+                    "06:15",
+                    "08:00"
+                  )
+                }
+              >
+                Bakram Joga, {slMestaBi[8]}
+              </th>
             </tr>
           </table>
         </div>
