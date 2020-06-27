@@ -8,14 +8,14 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function ForceTrening() {
+function ForceTrening(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [totalRating, setTotalRating] = useState(0);
   const [uk, setUk] = useState(1);
-
+  const { slMestaFo, setSlMestaFo, zakazi } = props;
   const postavi = () => {
     var array = [];
     array = comments;
@@ -117,19 +117,99 @@ function ForceTrening() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening,{slMestaFo[0]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening,{slMestaFo[1]}{" "}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Subota",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening ,{slMestaFo[2]}{" "}
+              </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Subota",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening,,{slMestaFo[3]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Subota",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening,{slMestaFo[4]}{" "}
+              </th>
               <th></th>
               <th></th>
             </tr>
@@ -137,9 +217,41 @@ function ForceTrening() {
               <th>02:15-4:00</th>
               <th></th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Sreda",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[5]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Petak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[6]}{" "}
+              </th>
               <th></th>
             </tr>
             <tr>
@@ -147,16 +259,80 @@ function ForceTrening() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Cetvrtak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[7]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Subota",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[8]}{" "}
+              </th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    9,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Ponedeljak",
+                    "06:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[9]}{" "}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Force trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    10,
+                    setSlMestaFo,
+                    slMestaFo,
+                    "Force ",
+                    "Cetvrtak",
+                    "06:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Force trening, {slMestaFo[10]}{" "}
+              </th>
               <th></th>
               <th></th>
             </tr>

@@ -8,14 +8,14 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function KlasicanPilates() {
+function KlasicanPilates(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [totalRating, setTotalRating] = useState(0);
   const [uk, setUk] = useState(1);
-
+  const { slMestaCl, setSlMestaCl, zakazi } = props;
   const postavi = () => {
     var array = [];
     array = comments;
@@ -120,17 +120,77 @@ function KlasicanPilates() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[0]}
+              </th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[1]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "SUbota",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                Klasican pilates,{slMestaCl[2]}
+              </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Utorak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[3]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -140,17 +200,77 @@ function KlasicanPilates() {
               <th>02:15-4:00</th>
               <th></th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Utorak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[4]}
+              </th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Cetvrtak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[5]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Ponedeljka",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[6]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Cetvrtak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                Klasican pilates,{slMestaCl[7]}
+              </th>
               <th></th>
               <th></th>
             </tr>
@@ -158,10 +278,40 @@ function KlasicanPilates() {
               <th>06:15-08:00</th>
               <th></th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Sreda",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                Klasican pilates, {slMestaCl[8]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Klasican pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    9,
+                    setSlMestaCl,
+                    slMestaCl,
+                    "Klasicni ",
+                    "Subota",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                Klasican pilates,{slMestaCl[9]}
+              </th>
             </tr>
           </table>
         </div>

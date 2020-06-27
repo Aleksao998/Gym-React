@@ -9,14 +9,14 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function Core30() {
+function Core30(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const [totalRating, setTotalRating] = useState(0);
   const [uk, setUk] = useState(1);
-
+  const { slMestaCo, setSlMestaCo, zakazi } = props;
   const postavi = () => {
     var array = [];
     array = comments;
@@ -121,18 +121,98 @@ function Core30() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening,{slMestaCo[0]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening, ,{slMestaCo[1]}{" "}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Subota",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening,{slMestaCo[2]}{" "}
+              </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
-              <th class="color"> Core30 trening </th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Utorak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening,{slMestaCo[3]}{" "}
+              </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Sreda",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening,{slMestaCo[4]}{" "}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -142,22 +222,102 @@ function Core30() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Cetvrtak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening, {slMestaCo[5]}{" "}
+              </th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Subota",
+                    "02:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening, {slMestaCo[6]}{" "}
+              </th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Sreda",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening, {slMestaCo[7]}{" "}
+              </th>
               <th></th>
               <th></th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Sibota",
+                    "04:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening , {slMestaCo[8]}{" "}
+              </th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
-              <th class="color"> Core30 trening </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    9,
+                    setSlMestaCo,
+                    slMestaCo,
+                    "Core ",
+                    "Ponedeljak",
+                    "06:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Core30 trening, {slMestaCo[9]}{" "}
+              </th>
               <th></th>
               <th></th>
               <th></th>
