@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function StartIt() {
+function StartIt(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -45,6 +45,7 @@ function StartIt() {
     const { value } = event.target;
     setComment(value);
   };
+  const { slMestaSta, setSlMestaSta } = props;
   /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
@@ -115,17 +116,65 @@ function StartIt() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[0]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Petak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[1]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Utorak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[2]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -135,7 +184,23 @@ function StartIt() {
               <th>02:15-4:00</th>
               <th></th>
               <th></th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Ponedeljak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[3]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -145,16 +210,64 @@ function StartIt() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Cetvrtak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[4]}
+              </th>
               <th></th>
               <th></th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Ponedeljak",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[5]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">StartIt trening</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaSta,
+                    slMestaSta,
+                    "StartitCardio",
+                    "Cetvrtak",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                StartIt Cardio{slMestaSta[6]}
+              </th>
               <th></th>
               <th></th>
             </tr>

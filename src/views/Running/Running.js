@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function Running() {
+function Running(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -45,6 +45,7 @@ function Running() {
     const { value } = event.target;
     setComment(value);
   };
+  const { slMestaRu, setSlMestaRu } = props;
   /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
@@ -119,7 +120,23 @@ function Running() {
             <tr>
               <th>10:15-12:00</th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Utorak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[0]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -130,13 +147,61 @@ function Running() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Cetvrtak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[1]}
+              </th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Subota",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[2]}
+              </th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Ponedeljak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[3]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
@@ -146,19 +211,83 @@ function Running() {
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Utorak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[4]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Subota",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[5]}
+              </th>
             </tr>
             <tr>
               <th>06:15-08:00</th>
               <th></th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Sreda",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[6]}
+              </th>
               <th></th>
-              <th class="color"> Running </th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaRu,
+                    slMestaRu,
+                    "Running",
+                    "Petak",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Running{slMestaRu[7]}
+              </th>
               <th></th>
             </tr>
           </table>

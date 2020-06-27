@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Input, Button } from "reactstrap";
 import StarRatings from "react-star-ratings";
 /*Copy Up*/
-function PerformerPilates() {
+function PerformerPilates(props) {
   /*Copy down*/
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
@@ -45,6 +45,7 @@ function PerformerPilates() {
     const { value } = event.target;
     setComment(value);
   };
+  const { slMestaPe, setSlMestaPe } = props;
   /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
@@ -124,38 +125,166 @@ function PerformerPilates() {
             </tr>
             <tr>
               <th>10:15-12:00</th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Ponedeljak",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[0]}
+              </th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[1]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Subota",
+                    "10:15",
+                    "12:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[2]}
+              </th>
             </tr>
             <tr>
               <th>12:15-2:00</th>
               <th></th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    3,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Sreda",
+                    "12:15",
+                    "2:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[3]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
             </tr>
             <tr>
               <th>02:15-4:00</th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Ponedeljak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[4]}
+              </th>
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Petak",
+                    "2:15",
+                    "4:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[5]}
+              </th>
               <th></th>
             </tr>
             <tr>
               <th>04:15-6:00</th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Utorak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[6]}
+              </th>
               <th></th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Petak",
+                    "4:15",
+                    "6:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[7]}
+              </th>
               <th></th>
             </tr>
             <tr>
@@ -163,7 +292,23 @@ function PerformerPilates() {
               <th></th>
               <th></th>
               <th></th>
-              <th class="color">Performer pilates</th>
+              <th
+                class="color"
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaPe,
+                    slMestaPe,
+                    "PerformerPilates",
+                    "Cetvrtak",
+                    "6:15",
+                    "8:00"
+                  )
+                }
+              >
+                {" "}
+                Performer pilates{slMestaPe[8]}
+              </th>
               <th></th>
               <th></th>
             </tr>
