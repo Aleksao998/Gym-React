@@ -40,8 +40,12 @@ function AppRouters(props) {
     pocetnaYoga: "Yoga",
     text2: "",
   });
+  const [mojiTermini, setMojiTermini] = useState([]);
   React.useEffect(() => {}, []);
 
+  //zakazivanje
+  const [slMestaAs, setSlMestaAs] = useState([1, 5, 4, 2, 8, 9, 2, 5, 8, 1]);
+  const [slMestaBa, setSlMestaBa] = useState([1, 5, 4, 2, 8, 9, 2, 5, 8]);
   return (
     <div>
       <NavBar language={language} setLanguage={setLanguage} />
@@ -138,7 +142,13 @@ function AppRouters(props) {
         />
         <Route
           path="/bakram-joga"
-          render={(props) => <BakramJoga {...props} />}
+          render={(props) => (
+            <BakramJoga
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
         <Route
           path="/nutritionist"
@@ -161,38 +171,129 @@ function AppRouters(props) {
         <Route path="/massages" render={(props) => <Massages {...props} />} />
         <Route
           path="/astanga-joga"
-          render={(props) => <AstangaJoga {...props} />}
+          render={(props) => (
+            <AstangaJoga
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+              slMestaAs={slMestaAs}
+              setSlMestaAs={setSlMestaAs}
+            />
+          )}
         />
         <Route
           path="/bakiti-joga"
-          render={(props) => <BakitiJoga {...props} />}
+          render={(props) => (
+            <BakitiJoga
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+              slMestaBa={slMestaBa}
+              setSlMestaBa={setSlMestaBa}
+            />
+          )}
         />
-        <Route path="/startit" render={(props) => <StartIt {...props} />} />
-        <Route path="/running" render={(props) => <Running {...props} />} />
+        <Route
+          path="/startit"
+          render={(props) => (
+            <StartIt
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
+        />
+        <Route
+          path="/running"
+          render={(props) => (
+            <Running
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
+        />
         <Route
           path="/step-trening"
-          render={(props) => <StepTrening {...props} />}
+          render={(props) => (
+            <StepTrening
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
-        <Route path="/pump" render={(props) => <Pump {...props} />} />
+        <Route
+          path="/pump"
+          render={(props) => (
+            <Pump
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
+        />
         <Route
           path="/force-trening"
-          render={(props) => <ForceTrening {...props} />}
+          render={(props) => (
+            <ForceTrening
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
-        <Route path="/core30" render={(props) => <Core30 {...props} />} />
+        <Route
+          path="/core30"
+          render={(props) => (
+            <Core30
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
+          setMojiTermini={setMojiTermini}
+        />
         <Route
           path="/stott-pilates"
-          render={(props) => <StottPilates {...props} />}
+          render={(props) => (
+            <StottPilates
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
         <Route
           path="/klasican-pilates"
-          render={(props) => <KlasicanPilates {...props} />}
+          render={(props) => (
+            <KlasicanPilates
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
         <Route
           path="/performer-pilates"
-          render={(props) => <PerformerPilates {...props} />}
+          render={(props) => (
+            <PerformerPilates
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
         />
 
-        <Route render={(props) => <ErrorPage404 {...props} />} />
+        <Route
+          render={(props) => (
+            <ErrorPage404
+              {...props}
+              setMojiTermini={setMojiTermini}
+              mojiTermini={mojiTermini}
+            />
+          )}
+        />
       </Switch>
       <Footer />
     </div>

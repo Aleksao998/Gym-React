@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../../assets/img/yoga.jpg";
-
-function Yoga() {
+import { withRouter } from "react-router-dom";
+function Yoga(props) {
   return (
     <div class="site-section" style={{ marginTop: "100px" }}>
       <div class="container">
@@ -42,7 +42,12 @@ function Yoga() {
                 izvode u serijama. Samo početna serija ima 26 položaja.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/bakram-joga");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -60,7 +65,12 @@ function Yoga() {
                 najpoznatijih serija ove vrste joge je „Pozdrav suncu“.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/astanga-joga");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -78,7 +88,12 @@ function Yoga() {
                 pesama.
               </p>
               <p>
-                <a href="#" class="btn btn-outline-primary py-2 px-4">
+                <a
+                  onClick={() => {
+                    props.history.push("/bakiti-joga");
+                  }}
+                  class="btn btn-outline-primary py-2 px-4"
+                >
                   Sazanaj više
                 </a>
               </p>
@@ -90,4 +105,4 @@ function Yoga() {
   );
 }
 
-export default Yoga;
+export default withRouter(Yoga);

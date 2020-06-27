@@ -3,9 +3,49 @@ import image from "../../assets/img/pilates1.jpg";
 import image2 from "../../assets/img/pilates2.jpg";
 import image3 from "../../assets/img/pilates3.jpg";
 import image4 from "../../assets/img/pilates4.jpg";
-import { FormGroup, Label, Input, FormText, Button } from "reactstrap";
-import { Row, Container, Col } from "reactstrap";
+/*Copy down*/
+import { useState } from "react";
+import { Input, Button } from "reactstrap";
+import StarRatings from "react-star-ratings";
+/*Copy Up*/
 function KlasicanPilates() {
+  /*Copy down*/
+  const [comments, setComments] = useState([]);
+  const [comment, setComment] = useState("");
+  const [rating, setRating] = useState(0);
+  const [totalRating, setTotalRating] = useState(0);
+  const [uk, setUk] = useState(1);
+
+  const postavi = () => {
+    var array = [];
+    array = comments;
+
+    var ukupno = (totalRating + rating) / uk;
+
+    var obj = {
+      text: comment,
+      rating: rating,
+    };
+
+    array.push(obj);
+    setUk(2);
+    setTotalRating(ukupno);
+    setComments(array);
+    setComment("");
+    setRating(0);
+    console.log(array);
+    document.getElementById("create-course-form").reset();
+  };
+
+  const changeRating = (newRating, name) => {
+    setRating(newRating);
+  };
+
+  const handleOnChange = (event) => {
+    const { value } = event.target;
+    setComment(value);
+  };
+  /*Copy Up*/
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -28,6 +68,12 @@ function KlasicanPilates() {
           <h2 class="site-section-heading mb-3" style={{ padding: "10px" }}>
             KLASICAN PILATES
           </h2>
+          <StarRatings
+            rating={totalRating}
+            starRatedColor="blue"
+            numberOfStars={6}
+            name="rating"
+          />
           <p style={{ padding: "10px" }}>
             Pilates predstavlja sistem vežbi istezanja tela i snage koji je
             prije devedeset godina razvio Joseph H. Pilates.
@@ -118,6 +164,65 @@ function KlasicanPilates() {
               <th class="color">Klasican pilates</th>
             </tr>
           </table>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <h3>Komentari</h3>
+        </div>
+      </div>
+      <div className="row" style={{ marginTop: "30px" }}>
+        <div className="col">
+          <ul style={{ margin: "0", padding: "0" }}>
+            {comments.map((item) => (
+              <li key={item} style={{ listStyleType: "none" }}>
+                <div
+                  style={{
+                    height: "70px",
+                    width: "100%",
+                    border: "1px solid black",
+                    marginTop: "10px",
+                  }}
+                >
+                  <StarRatings
+                    rating={item.rating}
+                    starRatedColor="blue"
+                    numberOfStars={6}
+                    name="rating"
+                  />
+                  {item.text}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <h3>Ostavi Komentar</h3>
+        </div>
+      </div>
+      <div className="row" style={{ marginTop: "30px" }}>
+        <div className="col">
+          <form id="create-course-form">
+            <div style={{ width: "90%" }}>
+              <StarRatings
+                rating={rating}
+                starRatedColor="blue"
+                changeRating={changeRating}
+                numberOfStars={6}
+                name="rating"
+              />
+            </div>
+            <Input type="text" name="comment" onChange={handleOnChange}></Input>
+            <Button
+              color="primary"
+              onClick={postavi}
+              style={{ marginTop: "15px" }}
+            >
+              Postavi commentar
+            </Button>
+          </form>
         </div>
       </div>
     </div>
