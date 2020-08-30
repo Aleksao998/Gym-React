@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
-function Massages() {
+function Massages(props) {
   const [state, setState] = useState({
     name: "",
     lastName: "",
@@ -35,16 +35,24 @@ function Massages() {
       <Page size="A4" style={styles.page}>
         <View style={styles.section} style={{ marginTop: "20px" }}>
           <View style={{ textAlign: "center" }}>
-            <Text>Zakazivanje Masaze</Text>
+            <Text>
+              {props.language ? "Zakazivanje Masaze" : "Appointment booking"}
+            </Text>
           </View>
 
           <View style={styles.section}>
             <Text>
-              Ime i Prezime: {state.name} {state.lastName}
+              {props.language ? "Ime i Prezime:" : "Name and LastName"}{" "}
+              {state.name} {state.lastName}
             </Text>
             <Text>Email:{state.email} </Text>
-            <Text>Datum: {state.date}</Text>
-            <Text>Opis problema: {state.text}</Text>
+            <Text>
+              {props.language ? "Datum" : "Date"}: {state.date}
+            </Text>
+            <Text>
+              {props.language ? "Opis problema" : "Problem description"}:{" "}
+              {state.text}
+            </Text>
           </View>
         </View>
       </Page>
@@ -65,32 +73,24 @@ function Massages() {
             </p>
           </div>
           <div class="col-lg-5 ml-auto">
-            <h2 class="site-section-heading mb-3">SPORTSKA MASAŽA</h2>
+            <h2 class="site-section-heading mb-3">
+              {props.language ? "SPORTSKA MASAŽA" : "Sport Massage"}
+            </h2>
             <p>
-              Sportska masaža se preporučuje sportistima kao i rekreativcima.
-              Postoji nekoliko vrsta sportskih masaža. Masaža koja se izvodi
-              nakon treninga ili dugotrajnog napornog rada mišića sprečava
-              nastanak mlečne kiseline, ili istu otklanja ukoliko je došlo do
-              njenog nagomilavanja. Nakupljena mlečna kiselina se pretvara u
-              kalcifikate, koji mogu da izazovu mišićnu napetost pa čak i bol.
-              Postoje i sportske masaže čija je uloga da saniraju najčešće
-              sportske povrede (bacački lakat, teniski lakat, plivačko rame,
-              skakačko koleno itd.). Ova masaža preporučuje se i kada do povrede
-              nije došlo, nego je mišić umoran, pa masažom treba da se opusti i
-              rastereti. Često se rade i sportske masaže koje služe za pripremu
-              sportiste za takmičenje, utakmicu i sl. Ova masaža opušta
-              periferni nervni sistem i priprema telo za nove napore. Sportskim
-              masažama se poboljšava prokrvljenost mišića, pa je on spremniji za
-              napor koji sledi.
+              {props.language
+                ? "Sportska masaža se preporučuje sportistima kao i rekreativcima. Postoji nekoliko vrsta sportskih masaža. Masaža koja se izvodi nakon treninga ili dugotrajnog napornog rada mišića sprečava nastanak mlečne kiseline, ili istu otklanja ukoliko je došlo do njenog nagomilavanja. Nakupljena mlečna kiselina se pretvara u kalcifikate, koji mogu da izazovu mišićnu napetost pa čak i bol. Postoje i sportske masaže čija je uloga da saniraju najčešće sportske povrede (bacački lakat, teniski lakat, plivačko rame, skakačko koleno itd.). Ova masaža preporučuje se i kada do povrede nije došlo, nego je mišić umoran, pa masažom treba da se opusti i rastereti. Često se rade i sportske masaže koje služe za pripremu sportiste za takmičenje, utakmicu i sl. Ova masaža opušta periferni nervni sistem i priprema telo za nove napore. Sportskim masažama se poboljšava prokrvljenost mišića, pa je on spremniji za napor koji sledi."
+                : "Sports massage is recommended for athletes as well as recreationists. There are several types of sports massages. A massage that is performed after training or long-term hard work of the muscles prevents the formation of lactic acid, or removes it if it has accumulated. Accumulated lactic acid is converted into calcifications, which can cause muscle tension and even pain. There are also sports massages whose role is to repair the most common sports injuries (throwing elbow, tennis elbow, swimming shoulder, jumping knee, etc.). This massage is also recommended when there is no injury, but the muscle is tired, so the massage should relax and relieve it. Sports massages are often done to prepare the athlete for the competition, match, etc. This massage relaxes the peripheral nervous system and prepares the body for new efforts. Sports massages improve blood circulation in the muscles, so he is more ready for the effort that follows."}
             </p>
           </div>
         </div>
       </div>
       <div class="forma">
-        <h2 class="site-section-heading mb-3">Rezervacija termina</h2>
+        <h2 class="site-section-heading mb-3">
+          {props.language ? "Rezervacija termina" : "Appointment booking"}
+        </h2>
         <form>
           <FormGroup id="pdf-form">
-            <Label for="firstName">Ime</Label>
+            <Label for="firstName">{props.language ? "Ime" : "Name"}</Label>
             <Input
               type="text"
               name="name"
@@ -101,7 +101,9 @@ function Massages() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="lastName">Prezime</Label>
+            <Label for="lastName">
+              {props.language ? "Prezime" : "LastName"}
+            </Label>
             <Input
               type="text"
               name="lastName"
@@ -124,7 +126,7 @@ function Massages() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="date">Datum termina</Label>
+            <Label for="date">{props.language ? "Datum" : "Date"}</Label>
             <Input
               type="date"
               name="date"
@@ -135,7 +137,9 @@ function Massages() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleText">Opis problema</Label>
+            <Label for="exampleText">
+              {props.language ? "Opis problema" : "Problem description"}
+            </Label>
             <Input
               type="textarea"
               onChange={handleOnChange}

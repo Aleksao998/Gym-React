@@ -14,12 +14,9 @@ function Cardio(props) {
           <div class="col-lg-5 ml-auto">
             <h2 class="site-section-heading mb-3">CARDIO</h2>
             <p>
-              Kardio trening je najefikasniji način za skidanje masnih naslaga,
-              postizanje i održavanja kondicije. Kardio-vežbe su neophodne za
-              svaki efikasan program treninga jer podstiču sagorevanje masnoća
-              ali su ujedno dobre i za celokupno zdravlje organizma. Takođe,
-              ukoliko dugo niste vežbali, i nemate snage za druge treninge,
-              kardio trening uvek možete prilagoditi svojim mogućnostima.
+              {props.language
+                ? " Kardio trening je najefikasniji način za skidanje masnih naslaga, postizanje i održavanja kondicije. Kardio-vežbe su neophodne za svaki efikasan program treninga jer podstiču sagorevanje masnoća ali su ujedno dobre i za celokupno zdravlje organizma. Takođe, ukoliko dugo niste vežbali, i nemate snage za druge treninge, kardio trening uvek možete prilagoditi svojim mogućnostima."
+                : "Cardio training is the most effective way to remove fat deposits, achieve and maintain fitness. Cardio exercises are necessary for any effective training program because they encourage fat burning, but they are also good for the overall health of the body. Also, if you haven't exercised for a long time, and you don't have the strength for other workouts, you can always adjust the cardio workout to your abilities."}
             </p>
           </div>
         </div>
@@ -33,8 +30,9 @@ function Cardio(props) {
                 <span>Start it</span>
               </h2>
               <p>
-                Vežbajte START IT i oslobodite se masnih naslaga. Osećaćete se
-                lagano i puni energije.
+                {props.language
+                  ? " Vežbajte START IT i oslobodite se masnih naslaga. Osećaćete se lagano i puni energije."
+                  : "Practice START IT and get rid of fat deposits. You will feel light and full of energy."}
               </p>
               <p>
                 <a
@@ -43,7 +41,7 @@ function Cardio(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>
@@ -53,7 +51,11 @@ function Cardio(props) {
               <h2 class="underline">
                 <span>Running</span>
               </h2>
-              <p>Trčanje ceo trening sa intervalima odmora.</p>
+              <p>
+                {props.language
+                  ? "Trčanje ceo trening sa intervalima odmora."
+                  : "Running the whole workout with rest intervals."}
+              </p>
               <p>
                 <a
                   onClick={() => {
@@ -61,7 +63,7 @@ function Cardio(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>
@@ -72,8 +74,9 @@ function Cardio(props) {
                 <span>Step trening</span>
               </h2>
               <p>
-                Treing na kome se smenjuje kardio i vežbe snage uz muziku. Radi
-                se sa step klupicom uz koreografiju.
+                {props.language
+                  ? " Treing na kome se smenjuje kardio i vežbe snage uz muziku. Radi se sa step klupicom uz koreografiju."
+                  : "Training that alternates between cardio and strength exercises with music. It is done with a step bench with choreography."}
               </p>
               <p>
                 <a
@@ -82,7 +85,7 @@ function Cardio(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>

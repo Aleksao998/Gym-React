@@ -13,8 +13,8 @@ function BlockFeature() {
               <span>Yoga</span>
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              fugiat iure eveniet perferendis odit est.
+              Bikram jogu je osnovao Bikram Čouduri (vidimo ga na slici sa dvoje
+              vežbača) je „vrela joga“
             </p>
           </div>
         </div>
@@ -25,8 +25,8 @@ function BlockFeature() {
             </span>
             <h2>Core</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              fugiat iure eveniet perferendis odit est.
+              Centralne mišićne strukture trupa (eng. core) predstavljaju osnovu
+              svakog pokreta...
             </p>
           </div>
         </div>
@@ -38,8 +38,8 @@ function BlockFeature() {
 
             <h2>Pilates</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              fugiat iure eveniet perferendis odit est.
+              Pilates predstavlja sistem vežbi istezanja tela i snage koji je
+              prije devedese...
             </p>
           </div>
         </div>
@@ -50,8 +50,8 @@ function BlockFeature() {
             </span>
             <h2>Cardio</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-              fugiat iure eveniet perferendis odit est.
+              Redovnim vežbanjem, trčanjem ćete poboljšati svoje zdravstveno
+              stanje.
             </p>
           </div>
         </div>

@@ -20,12 +20,16 @@ function ContactPage(props) {
             Pocetna
           </a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>Kontakt</BreadcrumbItem>
+        <BreadcrumbItem active>
+          {props.language ? "Kontakt" : "Contact"}
+        </BreadcrumbItem>
       </Breadcrumb>
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="contact-title">Get in Touch</h2>
+            <h2 class="contact-title">
+              {props.language ? "Stupite u kontakt" : "Get in touch"}
+            </h2>
           </div>
           <div class="col-lg-8">
             <form
@@ -92,7 +96,7 @@ function ContactPage(props) {
               </div>
               <div class="form-group mt-3">
                 <button type="submit" class="btn btn-outline-primary">
-                  Posalji
+                  {props.language ? "Posalji" : "Send"}
                 </button>
               </div>
             </form>
@@ -120,10 +124,6 @@ function ContactPage(props) {
               <span class="contact-info__icon">
                 <i class="fa fa-envelope" style={{ marginTop: "25px" }}></i>
               </span>
-              <div class="media-body">
-                <h3>support@colorlib.com</h3>
-                <p>Send us your query anytime!</p>
-              </div>
             </div>
           </div>
         </div>

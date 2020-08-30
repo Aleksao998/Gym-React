@@ -48,19 +48,9 @@ function BakitiJoga(props) {
   };
   /*Copy Up*/
 
-  const { slMestaBa, setSlMestaBa } = props;
+  const { slMestaBa, setSlMestaBa, zakazi } = props;
   const [reset, setReset] = useState(true);
-  const zakazi = (index, type, day, timeFrom, timeTo) => {
-    if (slMestaBa[index] != 0) {
-      let newArr = slMestaBa; // copying the old datas array
-      newArr[index] = newArr[index] - 1;
-      console.log(newArr);
-      setSlMestaBa(newArr);
-      setReset(!reset);
-      var arr = props.mojiTermini;
-      props.setMojiTermini(arr);
-    }
-  };
+
   return (
     <div style={{ paddingBottom: "50px" }}>
       <div class="row " style={{ marginTop: "70px" }}>
@@ -137,7 +127,17 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(0, "Bakram", "Sreda", "10:15", "12:00")}
+                onClick={() =>
+                  props.zakazi(
+                    0,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Sreda",
+                    "10:15",
+                    "12:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[0]}
               </th>
@@ -151,14 +151,34 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(1, "Bakram", "Sreda", "12:15", "2:00")}
+                onClick={() =>
+                  props.zakazi(
+                    1,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Sreda",
+                    "12:15",
+                    "2:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[1]}
               </th>
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(2, "Bakram", "Petak", "12:15", "2:00")}
+                onClick={() =>
+                  props.zakazi(
+                    2,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Petak",
+                    "12:15",
+                    "2:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[2]}
               </th>
@@ -170,7 +190,15 @@ function BakitiJoga(props) {
                 class="color"
                 class="color"
                 onClick={() =>
-                  zakazi(3, "Bakram", "Ponedeljak", "02:15", "4:00")
+                  props.zakazi(
+                    3,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Ponedeljak",
+                    "02:15",
+                    "4:00"
+                  )
                 }
               >
                 Bakram Joga {slMestaBa[3]}
@@ -179,7 +207,17 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(4, "Bakram", "Cetvrtak", "02:15", "4:00")}
+                onClick={() =>
+                  props.zakazi(
+                    4,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Cetvrtak",
+                    "02:15",
+                    "4:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[4]}
               </th>
@@ -192,7 +230,17 @@ function BakitiJoga(props) {
               <th
                 class="color"
                 class="color"
-                onClick={() => zakazi(5, "Bakram", "Utorak", "04:15", "6:00")}
+                onClick={() =>
+                  props.zakazi(
+                    5,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Utorak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[5]}
               </th>
@@ -200,7 +248,17 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(6, "Bakram", "Petak", "04:15", "6:00")}
+                onClick={() =>
+                  props.zakazi(
+                    6,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Petak",
+                    "04:15",
+                    "6:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[6]}
               </th>
@@ -212,7 +270,17 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(7, "Bakram", "Sreda", "06:15", "08:00")}
+                onClick={() =>
+                  props.zakazi(
+                    7,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Sreda",
+                    "06:15",
+                    "08:00"
+                  )
+                }
               >
                 Bakram Joga {slMestaBa[7]}
               </th>
@@ -220,9 +288,19 @@ function BakitiJoga(props) {
               <th></th>
               <th
                 class="color"
-                onClick={() => zakazi(8, "Bakram", "Subota", "06:15", "08:00")}
+                onClick={() =>
+                  props.zakazi(
+                    8,
+                    setSlMestaBa,
+                    slMestaBa,
+                    "Bakram",
+                    "Subota",
+                    "06:15",
+                    "08:00"
+                  )
+                }
               >
-                Bakram Joga {slMestaBa[7]}>Bakram Joga {slMestaBa[8]}
+                Bakram Joga {slMestaBa[8]}
               </th>
             </tr>
           </table>

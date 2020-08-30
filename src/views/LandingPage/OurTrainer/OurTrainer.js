@@ -4,12 +4,14 @@ import trainer1 from "../../../assets/img/person_1.jpg";
 import trainer2 from "../../../assets/img/person_2.jpg";
 import trainer3 from "../../../assets/img/person_3.jpg";
 import trainer4 from "../../../assets/img/person_4.jpg";
-function OurTrainers() {
+function OurTrainers(props) {
   return (
     <div class="site-section bg-light">
       <div class="container">
         <div class="heading-with-border text-center mb-5">
-          <h2 class="heading text-uppercase">Experts Trainer</h2>
+          <h2 class="heading text-uppercase">
+            {props.language ? "Nasi Treneri" : "Our Trainers"}
+          </h2>
         </div>
 
         <div class="row">
@@ -20,10 +22,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
@@ -45,10 +44,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
@@ -71,10 +67,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
@@ -96,10 +89,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
@@ -121,10 +111,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
@@ -147,10 +134,7 @@ function OurTrainers() {
                 <h2 style={{ color: "white", marginTop: "70px" }}>
                   Jonah Smith
                 </h2>
-                <p class="text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur quas iste corporis asperiores placeat earum.
-                </p>
+
                 <p>
                   <a href="#" class="p-2">
                     <span class="icon-facebook"></span>
