@@ -28,14 +28,10 @@ import Core30 from "views/Core30/Core30";
 import StottPilates from "views/StottPilates/StottPilates";
 import KlasicanPilates from "views/KlasicanPilates/KlasicanPilates";
 import PerformerPilates from "views/PerformerPilates/PerformerPilates";
-
+import Profile from "views/Profil/Profil";
 import ScrollToTop from "../components/Sroll/Scroll";
 function AppRouters(props) {
-  const [language, setLanguage] = useState("English");
-  const [srpski, setSrpski] = useState({
-    pocetnaYoga: "Joga",
-    text2: "",
-  });
+  const [language, setLanguage] = useState(true);
   const [english, setEnglish] = useState({
     pocetnaYoga: "Yoga",
     text2: "",
@@ -68,6 +64,20 @@ function AppRouters(props) {
       console.log(newArr);
       set(newArr);
       setReset(!reset);
+      var obj = {
+        index,
+        set,
+        value,
+        type,
+        day,
+        timeFrom,
+        timeTo,
+      };
+      var arr = [{}];
+      console.log(mojiTermini);
+      arr = mojiTermini;
+      arr.push(obj);
+      setMojiTermini(arr);
     }
   };
   return (
@@ -79,89 +89,62 @@ function AppRouters(props) {
           exact
           path="/"
           render={(props) => (
-            <LandingPage
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <LandingPage {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/kontakt"
           render={(props) => (
-            <ContactPage
+            <ContactPage {...props} language={language} english={english} />
+          )}
+        />
+        <Route
+          path="/profile"
+          render={(props) => (
+            <Profile
               {...props}
+              setReset={setReset}
+              reset={reset}
+              mojiTermini={mojiTermini}
+              setMojiTermini={setMojiTermini}
               language={language}
-              srpski={srpski}
-              english={english}
             />
           )}
         />
         <Route
           path="/o-nama"
           render={(props) => (
-            <AboutUs
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <AboutUs {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/pilates"
           render={(props) => (
-            <Pilates
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Pilates {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/yoga"
           render={(props) => (
-            <Yoga
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Yoga {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/core"
           render={(props) => (
-            <Core
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Core {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/cardio"
           render={(props) => (
-            <Cardio
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Cardio {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/traning"
           render={(props) => (
-            <Tranings
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Tranings {...props} language={language} english={english} />
           )}
         />
         <Route
@@ -180,19 +163,12 @@ function AppRouters(props) {
         <Route
           path="/nutritionist"
           render={(props) => (
-            <Nutritionist
-              {...props}
-              language={language}
-              srpski={srpski}
-              english={english}
-            />
+            <Nutritionist {...props} language={language} english={english} />
           )}
         />
         <Route
           path="/massages"
-          render={(props) => <Massages {...props} />}
-          language={language}
-          srpski={srpski}
+          render={(props) => <Massages {...props} language={language} />}
           english={english}
         />
         <Route path="/massages" render={(props) => <Massages {...props} />} />
@@ -214,6 +190,7 @@ function AppRouters(props) {
           render={(props) => (
             <BakitiJoga
               {...props}
+              zakazi={zakazi}
               setMojiTermini={setMojiTermini}
               mojiTermini={mojiTermini}
               slMestaBa={slMestaBa}

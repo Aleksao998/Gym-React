@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import bikram from "../../assets/img/bikram.jpg";
 import pilates from "../../assets/img/pilates.jpg";
@@ -20,7 +20,13 @@ import {
   UncontrolledDropdown,
 } from "reactstrap";
 function Trainings(props) {
-  const [fullArray, setFullArray] = useState([
+  useEffect(() => {
+    props.language ? setArray(fullArraySrp) : setArray(fullArrayEng);
+    props.language ? setFullArray(fullArraySrp) : setFullArray(fullArrayEng);
+  }, [props.language]);
+  const [fullArray, setFullArray] = useState([]);
+
+  const [fullArraySrp, setFullArray1] = useState([
     {
       type: "Yoga",
       title: "Bikram",
@@ -143,10 +149,133 @@ function Trainings(props) {
         "Step aerobik je koreografski trening sa mnogo koracanja i gibanja, sto daje takodje...",
     },
   ]);
+  const [fullArrayEng, setFullArray2] = useState([
+    {
+      type: "Yoga",
+      title: "Bikram",
+      img: bikram,
+      duration: "45min",
+      level: "4",
+      link: "/bakram-joga",
+      text:
+        "Bikram yoga was founded by Bikram Chowdhury (we see him in the picture with two practitioners) is hot yoga ...",
+    },
+    {
+      type: "Pilates",
+      title: "Stot",
+      img: pilates,
+      duration: "55min",
+      level: "3",
+      link: "/stott-pilates",
+      text:
+        "STOTT PILATES can be practiced for life, from childhood to old age ...",
+    },
+    {
+      type: "Core",
+      title: "Pump",
+      img: pump,
+      duration: "65min",
+      level: "5",
+      link: "/pump",
+      text:
+        "PUMP is an original training with a barbell and weights that shapes and strengthens the body ...",
+    },
+    {
+      type: "Cardio",
+      title: "Start-it",
+      img: startits,
+      duration: "35min",
+      level: "3",
+      link: "/startit",
+      text:
+        "Start IT trainings consist of short but strong intervals of physical activity ...",
+    },
+    {
+      type: "Yoga",
+      title: "Aštanga",
+      img: astanga,
+      duration: "45min",
+      level: "4",
+      link: "/astanga-joga",
+      text:
+        "You know, it can be very complicated with yoga because it's hard to catch what it comes from.",
+    },
+    {
+      type: "Pilates",
+      title: "Klasični",
+      img: klasicniPi,
+      duration: "35min",
+      level: "2",
+      link: "/klasican-pilates",
+      text:
+        "Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading.",
+    },
+    {
+      type: "Core",
+      title: "Force",
+      img: force,
+      duration: "55min",
+      level: "4",
+      link: "/force-trening",
+      text:
+        "The core, core or center consists of the muscles around the hips, abdominal muscles, back and shoulder muscles.",
+    },
+    {
+      type: "Cardio",
+      title: "Trčanje",
+      img: trcanje,
+      duration: "65min",
+      level: "3",
+      link: "/running",
+
+      text: "By exercising regularly, running, you will improve your health.",
+    },
+    {
+      type: "Yoga",
+      title: "Bakiti",
+      img: bahkti,
+      duration: "60min",
+      level: "3",
+      link: "/bakiti-joga",
+      text:
+        "Bakti means love and devotion to God and his creation, respect and attention ...",
+    },
+    {
+      type: "Pilates",
+      title: "Performer",
+      img: performace,
+      duration: "120min",
+      level: "3",
+      link: "/performer-pilates",
+      text:
+        "Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading. The very idea of a reformer ...",
+    },
+    {
+      type: "Core",
+      title: "Core-30",
+      img: core30,
+      duration: "30min",
+      level: "5",
+      link: "/core30",
+      text:
+        "The central muscular structures of the trunk (core) are the basis of every movement ...",
+    },
+    {
+      type: "Cardio",
+      title: "Step",
+      img: startit,
+      duration: "60min",
+      level: "2",
+      link: "/step-trening",
+      text:
+        "Step aerobics is a choreographic training with a lot of steps and movements, which also gives ...",
+    },
+  ]);
   const [array, setArray] = useState([]);
   const [reset, setReset] = useState(true);
   React.useEffect(() => {
-    setArray(fullArray);
+    props.language ? setArray(fullArraySrp) : setArray(fullArrayEng);
+    props.language ? setFullArray(fullArraySrp) : setFullArray(fullArrayEng);
   }, []);
 
   const filtrirajTip = (type) => {
@@ -196,7 +325,9 @@ function Trainings(props) {
             class="heading-with-border text-center mb-5"
             style={{ width: "100%" }}
           >
-            <h2 class="heading text-uppercase">Vrste Treninga</h2>
+            <h2 class="heading text-uppercase">
+              {props.language ? "Vrste Treninga" : "Type of training"}
+            </h2>
           </div>
         </div>
         <div class="row">
@@ -211,7 +342,7 @@ function Trainings(props) {
                 id="dropdownMenuButton"
                 type="button"
               >
-                Tipovi treninga
+                {props.language ? "Tipovi treninga" : "Type of training"}
               </DropdownToggle>
               <DropdownMenu aria-labelledby="dropdownMenuButton">
                 <DropdownItem onClick={() => filtrirajTip("Yoga")}>
@@ -241,7 +372,7 @@ function Trainings(props) {
                 id="dropdownMenuButton"
                 type="button"
               >
-                Sortiraj po tezini
+                {props.language ? "Sortiraj po dezini" : "Sorting"}
               </DropdownToggle>
               <DropdownMenu aria-labelledby="dropdownMenuButton">
                 <DropdownItem onClick={() => sortirajTezina("ASC", "level")}>
@@ -264,7 +395,7 @@ function Trainings(props) {
                 id="dropdownMenuButton"
                 type="button"
               >
-                Nivo Tezine
+                {props.language ? "Nivo tezine" : "Level"}
               </DropdownToggle>
               <DropdownMenu aria-labelledby="dropdownMenuButton">
                 <DropdownItem onClick={() => filtrirajTezina(2)}>
@@ -296,7 +427,9 @@ function Trainings(props) {
                 id="dropdownMenuButton"
                 type="button"
               >
-                Sortiraj po Trajanju
+                {props.language
+                  ? "Sortiraj po trajanju"
+                  : "Sorting by duration"}
               </DropdownToggle>
               <DropdownMenu aria-labelledby="dropdownMenuButton">
                 <DropdownItem onClick={() => sortirajTezina("ASC", "Duration")}>
@@ -319,8 +452,12 @@ function Trainings(props) {
                   <img src={item.img} alt="Image" class="img-fluid" />
                   <div class="media-image-body">
                     <h2>{item.title}</h2>
-                    <p>Trajanje:{item.duration}</p>
-                    <p>Nivo: {item.level}</p>
+                    <p>
+                      {props.language ? "Trajanje" : "Duration"}:{item.duration}
+                    </p>
+                    <p>
+                      {props.language ? "Nivo" : "Level"}: {item.level}
+                    </p>
                     <p>{item.text}</p>
                     <p className="text-center mt-3">
                       <a
@@ -329,7 +466,9 @@ function Trainings(props) {
                         }}
                         class="btn btn-primary text-white px-4"
                       >
-                        <span class="caption">Detaljno</span>
+                        <span class="caption">
+                          {props.language ? "Detaljno" : "Detail"}
+                        </span>
                       </a>
                     </p>
                   </div>

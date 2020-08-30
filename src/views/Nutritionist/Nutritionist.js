@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function Nutritionist() {
+function Nutritionist(props) {
   const [state, setState] = useState({
     name: "",
     lastName: "",
@@ -36,16 +36,26 @@ function Nutritionist() {
       <Page size="A4" style={styles.page}>
         <View style={styles.section} style={{ marginTop: "20px" }}>
           <View style={{ textAlign: "center" }}>
-            <Text>Zakazivanje Nutricioniste</Text>
+            <Text>
+              {props.language
+                ? "Zakazivanje Nutricioniste"
+                : "Appointment booking"}
+            </Text>
           </View>
 
           <View style={styles.section}>
             <Text>
-              Ime i Prezime: {state.name} {state.lastName}
+              {props.language ? "Ime Prezime" : "Name And LastName"}{" "}
+              {state.name} {state.lastName}
             </Text>
             <Text>Email:{state.email} </Text>
-            <Text>Datum: {state.date}</Text>
-            <Text>Opis problema: {state.text}</Text>
+            <Text>
+              {props.language ? "Datum" : "Date"}: {state.date}
+            </Text>
+            <Text>
+              {props.language ? "Opis problema" : "Problem description"}:{" "}
+              {state.text}
+            </Text>
           </View>
         </View>
       </Page>
@@ -67,31 +77,26 @@ function Nutritionist() {
             </p>
           </div>
           <div class="col-lg-5 ml-auto">
-            <h2 class="site-section-heading mb-3">NUTRICIONISTA</h2>
+            <h2 class="site-section-heading mb-3">
+              {" "}
+              {props.language ? "Nutricionista" : "Nutritions"}
+            </h2>
             <p>
-              Nutricionista je tu da vam pomogne da na zdrav i bezbedan način
-              dostignete željene ciljeve i transformišete svoje telo. Internet
-              je prepun mahom štetnih i neefikasnih dijeta koje dovode do jo-jo
-              efekta, i u najgorem slučaju, značajnog pogoršanja vašeg zdravlja.
-              Svaka osoba koja se obrati nutricionisti za pomoć dobiće posebni
-              tretman, i plan ishrane koji odgovara njihovim fitnes ciljevima, i
-              fizičkom zdravlju. Osobe sa zdravstvenim problemima ko što je
-              fijabetes ili visok krvni pritisak moraju posebno da vode računa o
-              ishrani, i nutricionista za svaku osobu ponaosob osmišljava
-              adekvatni plan ishrane koji će, u kombinaciji sa treningom,
-              dovesti do željene transformacije tela i pre svega, zdravog i
-              srećnijeg života. Uostalom, neadekvatna ishrana bogata trans
-              masnim kiselinama I šećerima može izazvati niz zdravstvenih
-              problema.
+              {props.language
+                ? " Nutricionista je tu da vam pomogne da na zdrav i bezbedan način dostignete željene ciljeve i transformišete svoje telo. Internet je prepun mahom štetnih i neefikasnih dijeta koje dovode do jo-jo efekta, i u najgorem slučaju, značajnog pogoršanja vašeg zdravlja. Svaka osoba koja se obrati nutricionisti za pomoć dobiće posebni tretman, i plan ishrane koji odgovara njihovim fitnes ciljevima, i fizičkom zdravlju. Osobe sa zdravstvenim problemima ko što je fijabetes ili visok krvni pritisak moraju posebno da vode računa o ishrani, i nutricionista za svaku osobu ponaosob osmišljava adekvatni plan ishrane koji će, u kombinaciji sa treningom, dovesti do željene transformacije tela i pre svega, zdravog i srećnijeg života. Uostalom, neadekvatna ishrana bogata trans masnim kiselinama I šećerima može izazvati niz zdravstvenih problema."
+                : "The nutritionist is there to help you achieve your desired goals in a healthy and safe way and transform your body. The Internet is full of mostly harmful and ineffective diets that lead to a yo-yo effect, and in the worst case, a significant deterioration in your health. Every person who turns to nutritionists for help will receive special treatment, and a diet plan that suits their fitness goals, and physical health. People with health problems such as diabetes or high blood pressure must take special care of their diet, and the nutritionist devises an adequate diet plan for each person, which, in combination with training, will lead to the desired transformation of the body and, above all, a healthier and happier of life. After all, an inadequate diet rich in trans fatty acids and sugars can cause a number of health problems."}
             </p>
           </div>
         </div>
       </div>
       <div class="forma">
-        <h2 class="site-section-heading mb-3">Rezervacija termina</h2>
+        <h2 class="site-section-heading mb-3">
+          {" "}
+          {props.language ? "Rezervacija" : "Booking"}
+        </h2>
         <form>
           <FormGroup id="pdf-form">
-            <Label for="firstName">Ime</Label>
+            <Label for="firstName"> {props.language ? "Ime" : "Name"}</Label>
             <Input
               type="text"
               name="name"
@@ -102,7 +107,9 @@ function Nutritionist() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="lastName">Prezime</Label>
+            <Label for="lastName">
+              {props.language ? "Prezime" : "Lastname"}
+            </Label>
             <Input
               type="text"
               name="lastName"
@@ -125,7 +132,7 @@ function Nutritionist() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="date">Datum termina</Label>
+            <Label for="date">{props.language ? "Datum" : "Date"}</Label>
             <Input
               type="date"
               name="date"
@@ -136,7 +143,9 @@ function Nutritionist() {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleText">Opis problema</Label>
+            <Label for="exampleText">
+              {props.language ? "Problem" : "Problem description"}
+            </Label>
             <Input
               type="textarea"
               onChange={handleOnChange}

@@ -14,14 +14,9 @@ function Core(props) {
           <div class="col-lg-5 ml-auto">
             <h2 class="site-section-heading mb-3">CORE</h2>
             <p>
-              Trening koji traje 30 minuta, a donosi fantastične rezultate jeste
-              CORE. Po novom letnjem rasporedu i on je uveden kao novi trening.
-              Core je tu da te odvede na viši fitnes nivo i da u isto vreme
-              ojača i oblikuje tvoje telo. DA LI SI IKAD BIO NA OVOM TRENINGU?
-              Ako nisi, sad je pravo vreme da vidiš zašto svi toliko vole Core i
-              kako će on da doprinese tvom izgledu. Core kombinuje najbolje
-              elemente personalnog treninga sa motivišućom muzikom i energijom
-              grupnog fitnes treninga.
+              {props.language
+                ? "Trening koji traje 30 minuta, a donosi fantastične rezultate jeste CORE. Po novom letnjem rasporedu i on je uveden kao novi trening. Core je tu da te odvede na viši fitnes nivo i da u isto vreme ojača i oblikuje tvoje telo. DA LI SI IKAD BIO NA OVOM TRENINGU? Ako nisi, sad je pravo vreme da vidiš zašto svi toliko vole Core i kako će on da doprinese tvom izgledu. Core kombinuje najbolje elemente personalnog treninga sa motivišućom muzikom i energijom grupnog fitnes treninga."
+                : "A training that lasts 30 minutes and brings fantastic results is CORE. According to the new summer schedule, it was also introduced as a new training. Core is there to take you to a higher fitness level and at the same time strengthen and shape your body. HAVE YOU EVER BEEN AT THIS TRAINING? If you haven't, now is the right time to see why everyone loves Core so much and how he will contribute to your appearance. Core combines the best elements of personal training with motivating music and the energy of group fitness training."}
             </p>
           </div>
         </div>
@@ -35,9 +30,9 @@ function Core(props) {
                 <span>TRX CIRCUIT / PUMP</span>
               </h2>
               <p>
-                Najbolje je vežbati sa sopstvenom težinom. Popularni ,,viseći”
-                trening TRX vam omogućava upravo to. Prilgođen je svim nivoima
-                kondicije.
+                {props.language
+                  ? " Najbolje je vežbati sa sopstvenom težinom. Popularni ,,viseći” trening TRX vam omogućava upravo to. Prilgođen je svim nivoima kondicije."
+                  : "It is best to exercise with your own weight. The popular hanging training TRX allows you to do just that. It is adapted to all levels of fitness."}
               </p>
               <p>
                 <a
@@ -46,7 +41,7 @@ function Core(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>
@@ -57,8 +52,9 @@ function Core(props) {
                 <span>Force trening</span>
               </h2>
               <p>
-                Bazičnim pokretima oblikujte vaše telo. Povećajte mišićni tonus
-                i ojačajte mišiće celog tela.
+                {props.language
+                  ? " Bazičnim pokretima oblikujte vaše telo. Povećajte mišićni tonus i ojačajte mišiće celog tela."
+                  : "Shape your body with basic movements. Increase muscle tone and strengthen the muscles of the whole body."}
               </p>
               <p>
                 <a
@@ -67,7 +63,7 @@ function Core(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>
@@ -78,9 +74,9 @@ function Core(props) {
                 <span>Core 30</span>
               </h2>
               <p>
-                Želite trbušnjake, moraćete malo da se potrudite . Pored
-                korekcije ishrane, vežbajte core i imaćete stomak kakav ste
-                oduvek želeli. I vaša leđa će vam biti zahvalna.
+                {props.language
+                  ? " Želite trbušnjake, moraćete malo da se potrudite . Pored korekcije ishrane, vežbajte core i imaćete stomak kakav ste oduvek želeli. I vaša leđa će vam biti zahvalna."
+                  : "You want abs, you have to work a little harder. In addition to correcting your diet, exercise your core and you will have the stomach you have always wanted. And your back will thank you."}
               </p>
               <p>
                 <a
@@ -89,7 +85,7 @@ function Core(props) {
                   }}
                   class="btn btn-outline-primary py-2 px-4"
                 >
-                  Sazanaj više
+                  {props.language ? "Sazanaj više" : "More"}
                 </a>
               </p>
             </div>

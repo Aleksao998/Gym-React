@@ -102,7 +102,7 @@ function NavbarMenu(props) {
             </NavItem>
 
             <NavItem>
-              <NavLink to="/o-nama" tag={Link}>
+              <NavLink to="/profile" tag={Link}>
                 Moj nalog
               </NavLink>
             </NavItem>
@@ -127,7 +127,7 @@ function NavbarMenu(props) {
                 <DropdownItem
                   tag={Link}
                   onClick={() => {
-                    props.setLanguage("Srpski");
+                    props.setLanguage(true);
                   }}
                 >
                   Srpski
@@ -135,7 +135,7 @@ function NavbarMenu(props) {
                 <DropdownItem
                   tag={Link}
                   onClick={() => {
-                    props.setLanguage("English");
+                    props.setLanguage(false);
                   }}
                 >
                   Engleski
